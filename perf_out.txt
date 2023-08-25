@@ -1,0 +1,176 @@
+default/10000x          time:   [353.69 ms 354.12 ms 354.57 ms]
+
+# started on Tue May  2 19:12:32 2023
+
+
+ Performance counter stats for 'cargo bench default/10000x -- --profile-time 10 --quiet':
+
+           9972.03 msec task-clock                       #    1.000 CPUs utilized          
+                55      context-switches                 #    5.515 /sec                   
+                 0      cpu-migrations                   #    0.000 /sec                   
+            179003      page-faults                      #   17.951 K/sec                  
+       26600820948      cycles                           #    2.668 GHz                    
+       80250143647      instructions                     #    3.02  insn per cycle         
+       13235009938      branches                         #    1.327 G/sec                  
+         172717576      branch-misses                    #    1.31% of all branches        
+
+       9.973147649 seconds time elapsed
+
+       9.504330000 seconds user
+       0.468422000 seconds sys
+
+
+default/10000x          time:   [337.96 ms 338.46 ms 338.96 ms]
+
+# started on Tue May  2 19:13:59 2023
+
+
+ Performance counter stats for 'cargo bench default/10000x -- --profile-time 10 --quiet':
+
+          10228.48 msec task-clock                       #    1.000 CPUs utilized          
+                58      context-switches                 #    5.670 /sec                   
+                 0      cpu-migrations                   #    0.000 /sec                   
+            188770      page-faults                      #   18.455 K/sec                  
+       27281560517      cycles                           #    2.667 GHz                    
+       84869036953      instructions                     #    3.11  insn per cycle         
+       13979695058      branches                         #    1.367 G/sec                  
+         191276602      branch-misses                    #    1.37% of all branches        
+
+      10.229973463 seconds time elapsed
+
+       9.672155000 seconds user
+       0.556925000 seconds sys
+
+
+default/sse_10000x      time:   [297.35 ms 297.60 ms 297.86 ms]
+
+# started on Tue May  2 19:14:44 2023
+
+
+ Performance counter stats for 'cargo bench default/sse_10000x -- --profile-time 10 --quiet':
+
+          10019.00 msec task-clock                       #    1.000 CPUs utilized          
+                60      context-switches                 #    5.989 /sec                   
+                 0      cpu-migrations                   #    0.000 /sec                   
+            369305      page-faults                      #   36.860 K/sec                  
+       26619732799      cycles                           #    2.657 GHz                    
+       72944161620      instructions                     #    2.74  insn per cycle         
+        9222037160      branches                         #  920.455 M/sec                  
+         207009472      branch-misses                    #    2.24% of all branches        
+
+      10.020567897 seconds time elapsed
+
+       9.117645000 seconds user
+       0.902100000 seconds sys
+
+
+relaxed/10000x          time:   [7.0948 ms 7.1035 ms 7.1134 ms]
+
+# started on Tue May  2 19:15:22 2023
+
+
+ Performance counter stats for 'cargo bench relaxed/10000x -- --profile-time 10 --quiet':
+
+          11908.08 msec task-clock                       #    1.000 CPUs utilized          
+                52      context-switches                 #    4.367 /sec                   
+                 0      cpu-migrations                   #    0.000 /sec                   
+             91096      page-faults                      #    7.650 K/sec                  
+       31701910385      cycles                           #    2.662 GHz                    
+      109425953731      instructions                     #    3.45  insn per cycle         
+        7152955630      branches                         #  600.681 M/sec                  
+          14780329      branch-misses                    #    0.21% of all branches        
+
+      11.908949193 seconds time elapsed
+
+      11.681509000 seconds user
+       0.227324000 seconds sys
+
+
+relaxed/sse_10000x      time:   [3.3002 ms 3.3030 ms 3.3059 ms]
+
+# started on Tue May  2 19:15:58 2023
+
+
+ Performance counter stats for 'cargo bench relaxed/sse_10000x -- --profile-time 10 --quiet':
+
+          11750.84 msec task-clock                       #    1.000 CPUs utilized          
+                50      context-switches                 #    4.255 /sec                   
+                 0      cpu-migrations                   #    0.000 /sec                   
+            149529      page-faults                      #   12.725 K/sec                  
+       31411599944      cycles                           #    2.673 GHz                    
+       92511692845      instructions                     #    2.95  insn per cycle         
+        5829908274      branches                         #  496.127 M/sec                  
+          15122410      branch-misses                    #    0.26% of all branches        
+
+      11.751668669 seconds time elapsed
+
+      11.299943000 seconds user
+       0.451667000 seconds sys
+
+
+relaxed/avx2_10000x     time:   [914.14 µs 915.19 µs 916.35 µs]
+
+# started on Tue May  2 19:16:51 2023
+
+
+ Performance counter stats for 'cargo bench relaxed/avx2_10000x -- --profile-time 10 --quiet':
+
+          13257.73 msec task-clock                       #    1.000 CPUs utilized          
+                51      context-switches                 #    3.847 /sec                   
+                 1      cpu-migrations                   #    0.075 /sec                   
+            452039      page-faults                      #   34.096 K/sec                  
+       35242597644      cycles                           #    2.658 GHz                    
+       59102114305      instructions                     #    1.68  insn per cycle         
+        4027813649      branches                         #  303.809 M/sec                  
+          24500454      branch-misses                    #    0.61% of all branches        
+
+      13.258768815 seconds time elapsed
+
+      12.276233000 seconds user
+       0.982251000 seconds sys
+
+
+ideal/avx2_10000x       time:   [915.19 µs 916.25 µs 917.48 µs]
+
+# started on Tue May  2 19:17:46 2023
+
+
+ Performance counter stats for 'cargo bench ideal/avx2_10000x -- --profile-time 10 --quiet':
+
+          13303.33 msec task-clock                       #    1.000 CPUs utilized          
+                57      context-switches                 #    4.285 /sec                   
+                 0      cpu-migrations                   #    0.000 /sec                   
+            452063      page-faults                      #   33.981 K/sec                  
+       35578724711      cycles                           #    2.674 GHz                    
+       56235532186      instructions                     #    1.58  insn per cycle         
+        3950608281      branches                         #  296.964 M/sec                  
+          24431536      branch-misses                    #    0.62% of all branches        
+
+      13.304582061 seconds time elapsed
+
+      12.342511000 seconds user
+       0.961595000 seconds sys
+
+
+ideal/avx2_ideal_10000x time:   [335.30 µs 335.70 µs 336.15 µs]
+
+# started on Tue May  2 19:18:39 2023
+
+
+ Performance counter stats for 'cargo bench default/avx2_ideal_10000x -- --profile-time 10 --quiet':
+
+            231.54 msec task-clock                       #    0.999 CPUs utilized          
+                31      context-switches                 #  133.886 /sec                   
+                 0      cpu-migrations                   #    0.000 /sec                   
+             12074      page-faults                      #   52.146 K/sec                  
+         616718848      cycles                           #    2.664 GHz                    
+         943225162      instructions                     #    1.53  insn per cycle         
+         184562867      branches                         #  797.110 M/sec                  
+           3548200      branch-misses                    #    1.92% of all branches        
+
+       0.231828643 seconds time elapsed
+
+       0.201195000 seconds user
+       0.031137000 seconds sys
+
+

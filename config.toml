@@ -1,0 +1,2 @@
+# [build]
+# rustflags = ["-C no-vectorize-loops"] # custom flags to pass to all compiler invocations

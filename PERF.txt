@@ -1,0 +1,61 @@
+PERF
+
+default/1x              time:   [27.095 µs 27.907 µs 28.809 µs]
+default/10x             time:   [386.48 µs 393.44 µs 401.89 µs]
+default/100x            time:   [3.7584 ms 3.8568 ms 3.9626 ms]
+default/1000x           time:   [30.179 ms 31.098 ms 32.064 ms]
+default/10000x          time:   [355.80 ms 372.94 ms 392.30 ms]
+
+default/sse_1x          time:   [17.854 µs 18.675 µs 19.519 µs]
+default/sse_10x         time:   [346.07 µs 357.93 µs 371.05 µs]
+default/sse_100x        time:   [2.8254 ms 2.8620 ms 2.9015 ms]
+default/sse_1000x       time:   [30.598 ms 31.613 ms 32.714 ms]
+default/sse_10000x      time:   [283.18 ms 297.85 ms 320.89 ms]
+
+
+relaxed/1x              time:   [347.28 ns 352.56 ns 359.10 ns]
+relaxed/10x             time:   [3.3435 µs 3.3628 µs 3.3857 µs]
+relaxed/100x            time:   [35.340 µs 38.941 µs 44.340 µs]
+relaxed/1000x           time:   [347.56 µs 350.88 µs 354.81 µs]
+relaxed/10000x          time:   [4.3484 ms 4.4733 ms 4.6321 ms]
+
+relaxed/sse_1x          time:   [433.60 ns 509.63 ns 581.07 ns]
+relaxed/sse_10x         time:   [2.2315 µs 2.2539 µs 2.2867 µs]
+relaxed/sse_100x        time:   [22.262 µs 22.322 µs 22.384 µs]
+relaxed/sse_1000x       time:   [233.57 µs 239.62 µs 246.48 µs]
+relaxed/sse_10000x      time:   [3.6746 ms 3.7222 ms 3.7722 ms]
+
+relaxed/avx2_1x         time:   [42.368 ns 45.695 ns 50.488 ns]
+relaxed/avx2_10x        time:   [351.97 ns 364.08 ns 385.14 ns]
+relaxed/avx2_100x       time:   [4.4529 µs 4.4926 µs 4.5352 µs]
+relaxed/avx2_1000x      time:   [52.198 µs 53.690 µs 55.858 µs]
+relaxed/avx2_10000x     time:   [1.3002 ms 1.3169 ms 1.3350 ms]
+
+
+ideal/avx2_1x           time:   [40.729 ns 40.953 ns 41.208 ns]
+ideal/avx2_10x          time:   [353.72 ns 356.96 ns 360.63 ns]
+ideal/avx2_100x         time:   [4.2249 µs 4.5710 µs 5.3148 µs]
+ideal/avx2_1000x        time:   [52.452 µs 53.114 µs 53.884 µs]
+ideal/avx2_10000x       time:   [1.2352 ms 1.2645 ms 1.2963 ms]
+
+ideal/avx2_ideal_1x     time:   [24.644 ns 24.813 ns 25.014 ns]
+ideal/avx2_ideal_10x    time:   [170.05 ns 170.89 ns 171.86 ns]
+ideal/avx2_ideal_100x   time:   [1.6608 µs 1.6840 µs 1.7104 µs]
+ideal/avx2_ideal_1000x  time:   [21.107 µs 21.374 µs 21.652 µs]
+ideal/avx2_ideal_10000x time:   [432.91 µs 444.64 µs 457.37 µs]
+
+
+
+// relaxed with '-C no-vectorize-loops'
+relaxed/1x              time:   [679.83 ns 696.87 ns 715.65 ns]
+relaxed/10x             time:   [6.4056 µs 6.4230 µs 6.4431 µs]
+relaxed/100x            time:   [64.409 µs 64.739 µs 65.139 µs]
+relaxed/1000x           time:   [649.61 µs 651.87 µs 654.69 µs]
+relaxed/10000x          time:   [7.8681 ms 8.0742 ms 8.2860 ms]
+
+// relaxed with vectorization
+relaxed/1x              time:   [345.60 ns 348.54 ns 352.28 ns]
+relaxed/10x             time:   [3.4717 µs 3.5599 µs 3.6556 µs]
+relaxed/100x            time:   [35.625 µs 36.229 µs 36.847 µs]
+relaxed/1000x           time:   [362.04 µs 369.16 µs 377.32 µs]
+relaxed/10000x          time:   [4.0841 ms 4.1613 ms 4.2483 ms]

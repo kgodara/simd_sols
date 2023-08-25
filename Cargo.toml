@@ -1,0 +1,28 @@
+[package]
+name = "simd_sads"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+edition = "2021"
+crate-type = ["lib"]
+bench = false
+
+
+[[bin]]
+name = "simd_sads"
+path = "src/main.rs"
+bench = false
+
+[[bench]]
+name = "all"
+harness = false
+
+[dependencies]
+clap = { version = "3.1.18", features = ["derive"] }
+criterion = {version="0.4.0"}#, features=["html_reports"]}
+pprof = { version = "0.11", features = ["flamegraph", "criterion"] }
+include_dir = "0.7.3"
+lazy_static = "1.4.0"
